@@ -1,91 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NidhiTarang</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NidhiTarang - A WAVE of Opportunity</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
   <div class="logo">
-    <div class="icon">₹</div>
+    <div class="logo-img">₹</div>
     <div><h2>NidhiTarang</h2><p>A WAVE of Opportunity for Every Entrepreneur</p></div>
   </div>
   <nav>
-    <a onclick="showPage('home')" id="nav-home" class="active">Home</a>
-    <a onclick="showPage('eligibility')" id="nav-eligibility">Schemes</a>
+    <a id="n-home" class="active" onclick="showPage('home')">Home</a>
+    <a id="n-schemes" onclick="showPage('schemesPage')">Schemes</a>
     <a>About Us</a>
     <a>Resources</a>
     <a>Contact</a>
   </nav>
 </header>
 
-<!-- PAGE 1 - HOME ONLY -->
+<!-- PAGE 1: HOME -->
 <div id="home" class="page active">
-  <section class="hero">
-    <div class="left">
-      <h1>From Government Support<br><span>to Business Growth.</span></h1>
+  <div class="hero">
+    <div class="hero-left">
+      <h1>From Government Support<br>to <span class="gold">Business Growth.</span></h1>
       <p>NidhiTarang helps entrepreneurs discover the right government schemes, financial assistance and support they are eligible for.</p>
-      <button class="orange" onclick="showPage('eligibility')">Find My Scheme →</button>
-      <button class="outline" onclick="showPage('eligibility')">Explore Schemes</button>
+      <div class="btns">
+        <button class="btn-orange" onclick="showPage('eligibility')">Find My Scheme <span>→</span></button>
+        <button class="btn-outline" onclick="showPage('eligibility')">Explore Schemes</button>
+      </div>
+      <div class="features">
+        <div><div class="f-icon blue">🛡️</div><div><b>Trusted & Verified</b><small>Official government data</small></div></div>
+        <div><div class="f-icon beige">▲</div><div><b>Wide Network</b><small>Banks, Partners & Government Bodies</small></div></div>
+        <div><div class="f-icon beige">◍</div><div><b>Save Time</b><small>All information in one place</small></div></div>
+        <div><div class="f-icon blue">👥</div><div><b>For Everyone</b><small>Startups, MSMEs, Individuals</small></div></div>
+      </div>
     </div>
-    <div class="right">
-      <div class="flag">🇮🇳</div>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/New_Parliament_of_India.png" class="parliament">
+    <div class="hero-right">
+      <img src="https://i.ibb.co/3m5g0pLq/new-parliament.png" alt="parliament" class="parl-img">
+      <!-- if that link fails use your local image parliament.png -->
     </div>
-  </section>
-  <div class="blue">Right Scheme. Right Support. Right Growth.</div>
+  </div>
+  <div class="footer-blue"><div class="disc-left">Disclaimer: Information provided is for guidance only.<br>Final approval is subject to government norms and<br>respective authorities.</div><div class="foot-center">Right Scheme. Right Support. Right Growth.</div><div class="chat">💬</div></div>
 </div>
 
-<!-- PAGE 2 - CHECK ELIGIBILITY -->
+<!-- PAGE 2: CHECK ELIGIBILITY -->
 <div id="eligibility" class="page">
-  <p class="step">Step 1 of 3 <span style="float:right">Step 1 of 3</span></p>
-  <div class="bar"><div style="width:33%"></div></div>
-  <h2 class="title">Check Your Eligibility</h2>
-  <form id="form" class="card">
-    <h4>Personal Details</h4>
-    <div class="grid"><input id="fullName" placeholder="e.g. Rahul Sharma"><input id="age" placeholder="e.g. 28"><select><option>Select Gender</option></select><select><option>Select Category</option></select></div>
-    <h4>Location Details</h4>
-    <div class="grid"><select id="state"><option>Select State</option><option selected>Rajasthan</option></select><input placeholder="e.g. Jaipur"><div>Urban <input type="radio" checked> Rural <input type="radio"></div></div>
-    <h4>Business Details</h4>
-    <div class="grid"><select id="biz"><option>Startup</option><option>MSME</option></select><select><option>Idea / Startup / MSME</option></select><select id="fund"><option>Up to 10L</option></select><select><option>Select Experience</option></select></div>
-    <center><button class="orange" type="submit">Find My Matching Schemes →</button></center>
-  </form>
-  <div class="blue">Right Scheme. Right Support. Right Growth.</div>
-</div>
-
-<!-- PAGE 3 - MATCHING SCHEMES -->
-<div id="schemesList" class="page">
-  <p class="step">Step 2 of 3 <span style="float:right">Step 2 of 3</span></p>
-  <div class="bar"><div style="width:66%"></div></div>
-  <div class="badge" id="badge">Rahul, 28, Jaipur, Rajasthan | Startup | Up to 10L</div>
-  <h2 class="title">Top Matching Schemes For You</h2>
-  <p style="padding-left:24px;font-size:13px">12 schemes found - 7 Central, 5 Rajasthan State</p>
-  <div class="layout">
-    <div class="filters"><b>Filters</b><br><label><input type="checkbox" checked> All</label><br><label><input type="checkbox" checked> Central Schemes</label><br><label><input type="checkbox" checked> Rajasthan State</label><br><br><b>Funding Type</b><br><label><input type="checkbox"> Collateral Free</label><br><b>Business Stage</b><br><label><input type="checkbox" checked> Startup</label></div>
-    <div class="schemes" id="schemesGrid"></div>
+  <div class="step-row"><span>Step 1 of 3</span><span>Step 1 of 3</span></div>
+  <div class="progress"><div style="width:33%"></div></div>
+  <h2 class="main-title">Check Your Eligibility</h2>
+  <p class="sub-title">Tell us about yourself to discover state-level and national schemes tailored for you</p>
+  <div class="form-card">
+    <h4><span class="dot">◍</span> Personal Details</h4>
+    <div class="grid2">
+      <div><label>Full Name</label><input id="fullName" placeholder="e.g. Rahul Sharma"></div>
+      <div><label>Age</label><input id="age" placeholder="e.g. 28"></div>
+      <div><label>Gender</label><select><option>Select Gender</option><option>Male</option><option>Female</option></select></div>
+      <div><label>Category</label><select><option>Select Category</option><option>General</option><option>OBC</option><option>SC/ST</option></select></div>
+    </div>
+    <h4><span class="dot">◎</span> Location Details <small>(For 1st time filled address)</small></h4>
+    <div class="grid2">
+      <div><label>State</label><select id="state"><option>Select State</option><option selected>Rajasthan</option><option>Delhi</option><option>Maharashtra</option></select></div>
+      <div><label>District / City</label><input placeholder="e.g. Jaipur"></div>
+      <div><label>Place Type</label><div class="radio"><label><input type="radio" name="place" checked> Urban</label><label><input type="radio" name="place"> Rural</label></div></div>
+    </div>
+    <h4><span class="dot">⌸</span> Business Details</h4>
+    <div class="grid2">
+      <div><label>Business Type</label><select><option>Select Business Type</option><option>Startup</option><option>MSME</option></select></div>
+      <div><label>Business Stage</label><select id="biz"><option>Idea / Startup / MSME</option><option>Startup</option><option>MSME</option></select></div>
+      <div><label>Funding Need</label><select id="fund"><option>e.g. Up to 10L</option><option>Up to 10L</option><option>Up to 1Cr</option></select></div>
+      <div><label>Experience Level</label><select><option>Select Experience Level</option><option>Fresher</option><option>1-3 years</option></select></div>
+    </div>
+    <button class="btn-orange center" id="findBtn">Find My Matching Schemes →</button>
   </div>
-  <center><button class="orange" style="margin-top:20px" onclick="showPage('topMatches')">View Top 3 Best Matches →</button></center>
-  <div class="blue">Right Scheme. Right Support. Right Growth.</div>
+  <div class="footer-blue"><div class="disc-left">Disclaimer: Information provided is for guidance only.<br>Final approval is subject to government norms and respective authorities.</div><div class="foot-center">Right Scheme. Right Support. Right Growth.</div></div>
 </div>
 
-<!-- PAGE 4 - TOP 3 -->
-<div id="topMatches" class="page">
-  <p class="step"><span style="float:right">Step 3 of 3 • Final Results</span></p>
-  <div class="bar"><div style="width:100%"></div></div>
-  <h2 class="title">Your Top 3 Best Matches</h2>
+<!-- PAGE 3: TOP MATCHING -->
+<div id="schemesPage" class="page">
+  <div class="step-row"><span>Step 2 of 3</span><span>Step 2 of 3</span></div>
+  <div class="progress"><div style="width:66%"></div></div>
+  <div class="profile-badge" id="profileBadge">Rahul, 28, Jaipur, Rajasthan | Startup | Up to 10L ✎</div>
+  <h2 class="main-title left">Top Matching Schemes For You</h2>
+  <p class="sub-title left">12 schemes found - 7 Central, 5 Rajasthan State <span class="info">ⓘ</span></p>
+  <div class="tabs"><button class="t active">All Schemes</button><button class="t">Central Schemes</button><button class="t">State Schemes (Rajasthan)</button><button class="t">For Women</button><button class="t">Collateral Free</button></div>
+  <div class="list-layout">
+    <div class="filter-box">
+      <h4>☰ Filters</h4>
+      <b>Stats / National</b>
+      <label><input type="checkbox" checked> All</label>
+      <label><input type="checkbox"> Central Schemes</label>
+      <label><input type="checkbox"> Rajasthan State</label>
+      <b>Funding Type</b>
+      <label><input type="checkbox" checked> Collateral Free</label>
+      <label><input type="checkbox"> Low Interest</label>
+      <label><input type="checkbox"> Subsidy</label>
+      <b>Business Stage</b>
+      <label><input type="checkbox" checked> Startup</label>
+      <label><input type="checkbox"> MSME</label>
+      <label><input type="checkbox"> Idea Stage</label>
+      <a class="reset">↺ Reset All Filters</a>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+  <center><button class="btn-orange" style="margin:20px" onclick="showPage('results')">View Top 3 Best Matches →</button></center>
+  <div class="footer-blue"><div class="foot-center">Right Scheme. Right Support. Right Growth.</div></div>
+</div>
+
+<!-- PAGE 4: TOP 3 BEST MATCHES -->
+<div id="results" class="page">
+  <div class="step-row right"><span>Step 3 of 3 • Final Results</span></div>
+  <div class="progress"><div style="width:100%"></div></div>
+  <h2 class="main-title">Your Top 3 Best Matches</h2>
+  <p class="sub-title">Based on your profile</p>
   <div class="top3">
-    <div class="mcard"><div class="no">#1</div><div class="pct">98% Match</div><h3>PMMY - MUDRA Yojana</h3><p>Loan up to 10L • Collateral Free</p><button class="orange small">Apply Now →</button></div>
-    <div class="mcard"><div class="no">#2</div><div class="pct">94% Match</div><h3>Rajasthan Startup Policy 2021</h3><p>Loan up to 10L • Incubation Support</p><button class="orange small">Apply Now →</button></div>
-    <div class="mcard"><div class="no">#3</div><div class="pct">89% Match</div><h3>Stand-Up India Scheme</h3><p>Loan up to 1Cr • Inclusive support</p><button class="orange small">Apply Now →</button></div>
+    <div class="best"><div class="num">#1</div><div class="perc"><span>★</span><br>98%<br><small>Match</small></div><h3>PMMY - Pradhan Mantri<br>MUDRA Yojana</h3><span class="tag">• Central</span><div class="details"><b>Key Benefits:</b><br>• Loan up to 10L • Collateral Free<br>• Low interest 8-12%<br>• Minimal documentation<br><br><b>Eligibility Met:</b><br><span class="green">✔ Age 28, Startup in Jaipur</span><br><span class="green">✔ Funding 8-10L</span><br>Estimated ₹5-10 Lakh</div><div class="d-flex"><button class="btn-outline small">View Details</button><button class="btn-orange small">Apply Now →</button></div></div>
+    <div class="best"><div class="num">#2</div><div class="perc"><span>★</span><br>94%<br><small>Match</small></div><h3>Rajasthan India Policy 2021</h3><span class="tag">• Rajasthan State</span><div class="details"><b>Key Benefits:</b><br>• Loan up to 10L • Incubation Support<br>• Startup boost for Rajasthan<br>• Focus on Jaipur & region<br><br><b>Eligibility Met:</b><br><span class="green">✔ 28yr, rooted Startup</span><br><span class="green">✔ Skilled signed</span><br>Estimated ₹10 Lakh</div><div class="d-flex"><button class="btn-outline small">View Details</button><button class="btn-orange small">Apply Now →</button></div></div>
+    <div class="best"><div class="num">#3</div><div class="perc"><span>★</span><br>89%<br><small>Match</small></div><h3>Stand-Up India Scheme</h3><span class="tag">• Central</span><div class="details"><b>Key Benefits:</b><br>• Loan up to 1Cr • Inclusive support<br>• Women/SC/ST focus<br>• Startup friendly<br><br><b>Eligibility Met:</b><br><span class="green">✔ Startup +5 years</span><br><span class="green">✔ Funding eligible</span><br>Estimated ₹5-10 Lakh</div><div class="d-flex"><button class="btn-outline small">View Details</button><button class="btn-orange small">Apply Now →</button></div></div>
   </div>
-  <div class="blue">Right Scheme. Right Support. Right Growth.</div>
+  <div class="footer-blue"><div class="disc-left" style="font-size:10px">Disclaimer: Information provided is for guidance only. Final approval is subject to government norms and respective authorities.</div><div class="foot-center">Right Scheme. Right Support. Right Growth.</div></div>
 </div>
 
-<footer>Right Scheme. Right Support. Right Growth.</footer>
 <script src="script.js"></script>
 </body>
 </html>
