@@ -1,92 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>NidhiTarang</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-  <div class="logo">
-    <div class="icon">◎</div>
-    <div><h2>NidhiTarang</h2><p>A WAVE of Opportunity for Every Entrepreneur</p></div>
-  </div>
-  <nav>
-    <a class="active" onclick="showPage('home')">Home</a>
-    <a>Schemes</a><a>About Us</a><a>Resources</a><a>Contact</a>
-  </nav>
+    <a class="logo" href="#home">
+        <span class="logo-symbol">
+            <span class="rupee">₹</span>
+            <span class="wave wave1"></span>
+            <span class="wave wave2"></span>
+            <span class="wave wave3"></span>
+        </span>
+
+        <span class="logo-text">
+            <b>NidhiTarang</b>
+            <small>A WAVE of Opportunity for Every Entrepreneur</small>
+        </span>
+    </a>
+
+    <nav>
+        <a data-page="home">Home</a>
+        <a data-page="schemes">Schemes</a>
+        <a data-page="about">About Us</a>
+        <a data-page="resources">Resources</a>
+        <a data-page="contact">Contact</a>
+    </nav>
 </header>
-
-<div id="home" class="page active">
-  <div class="hero">
-    <div class="left">
-      <h1>From Government Support<br>to <span>Business Growth.</span></h1>
-      <p>NidhiTarang helps entrepreneurs discover the right government schemes, financial assistance and support they are eligible for.</p>
-      <button class="btn-dark" onclick="showPage('eligibility')">Find My Scheme →</button>
-      <button class="btn-light" onclick="showPage('eligibility')">Explore Schemes</button>
-      <div class="trust">
-        <div>🛡️<b>Trusted & Verified</b><br><small>Official government data</small></div>
-        <div>🌐<b>Wide Network</b><br><small>Banks, Partners & Govt Bodies</small></div>
-        <div>⏱️<b>Save Time</b><br><small>All information in one place</small></div>
-        <div>👥<b>For Everyone</b><br><small>Startups, MSMEs, Individuals</small></div>
-      </div>
-    </div>
-    <div class="right">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/New_Parliament_House%2C_India.jpg/800px-New_Parliament_House%2C_India.jpg" alt="parliament">
-    </div>
-  </div>
-  <div class="blue">Right Scheme. Right Support. Right Growth.</div>
-  <div class="disc">Disclaimer: Information provided for guidance only. Final approval subject to government norms and respective authorities.</div>
-</div>
-
-<div id="eligibility" class="page">
-  <div class="step">Step 1 of 3 <span>Step 1 of 3</span></div>
-  <div class="wrap">
-    <h2>Check Your Eligibility</h2><p class="sub">Tell us about yourself to discover state-level and national schemes tailored for you</p>
-    <div class="card-box">
-      <h4>● Personal Details</h4>
-      <div class="grid"><div><label>Full Name</label><input id="name" value="Rahul Sharma"></div><div><label>Age</label><input value="28"></div><div><label>Gender</label><select><option>Select Gender</option></select></div><div><label>Category</label><select><option>Select Category</option></select></div></div>
-      <h4>● Location Details</h4>
-      <div class="grid"><div><label>State</label><select><option>Select State</option><option>Rajasthan</option></select></div><div><label>District / City</label><select><option>e.g. Jaipur</option></select></div><div><label>Place Type</label><input placeholder="e.g. Jaipur"></div><div><label>&nbsp;</label><select><option>Urban</option></select></div></div>
-      <h4>● Business Details</h4>
-      <div class="grid"><div><label>Business Type</label><select><option>MSME</option></select></div><div><label>Business Stage</label><select><option>Idea / Pre / MVP</option></select></div><div><label>Funding Need</label><input value="Up to 10L"></div><div><label>Experience Level</label><select><option>Select Experience Level</option></select></div></div>
-      <button class="btn-dark center" onclick="showPage('schemes')">Find My Matching Schemes →</button>
-    </div>
-  </div>
-  <div class="blue">Right Scheme. Right Support. Right Growth.</div>
-</div>
-
-<div id="schemes" class="page">
-  <div class="step">Step 2 of 3 <span id="ps">Rahul, 28, Jaipur, Rajasthan | Startup | Up to 10L</span></div>
-  <div class="wrap">
-    <h2>Top Matching Schemes For You</h2><p class="sub">12 schemes found - 7 Central, 5 Rajasthan State</p>
-    <div class="tabs"><button class="tab active">All Schemes</button><button class="tab">Central Schemes</button><button class="tab">State Schemes (Rajasthan)</button><button class="tab">For Women</button><button class="tab">Collateral Free</button></div>
-    <div class="cards">
-      <div class="sc"><small>Central Government Schemes - 5 Schemes - Central</small><h4>PMMY - Pradhan Mantri MUDRA Yojana</h4><p>Up to 10L • Collateral Free • 8-12% Interest</p><button class="s1">Apply Now →</button><button class="s2">View Details</button></div>
-      <div class="sc"><small>Rajasthan State Scheme</small><h4>Rajasthan Startup Policy 2021</h4><p>Up to 3L grant • Up to 2L/year • 3 years</p><button class="s1">Apply Now →</button><button class="s2">View Details</button></div>
-      <div class="sc"><small>Central Government Schemes</small><h4>Stand-Up India Scheme</h4><p>Up to 1Cr • SC/ST • Collateral Free</p><button class="s1">Apply Now →</button><button class="s2">View Details</button></div>
-      <div class="sc"><small>Rajasthan State Scheme</small><h4>Rajasthan MSME Interest Subsidy</h4><p>Up to 1L Subsidy • 5-8% Interest</p><button class="s1">Apply Now →</button><button class="s2">View Details</button></div>
-    </div>
-    <button class="btn-dark center" onclick="showPage('results')">View Top 3 Best Matches →</button>
-  </div>
-  <div class="blue">Right Scheme. Right Support. Right Growth.</div>
-</div>
-
-<div id="results" class="page">
-  <div class="step">Step 3 of 3 • Final Results</div>
-  <div class="wrap">
-    <h2>Your Top 3 Best Matches</h2><p class="sub">Based on your profile</p>
-    <div class="top3">
-      <div class="tcard"><div class="b">#1<div class="c">98%<br>Match</div></div><h4>PMMY - Pradhan Mantri MUDRA Yojana</h4><small>Central</small><p><b>Key Benefits:</b> Loan up to 10L • Collateral Free • Low Interest 8-12% • Minimal Documentation<br><b>Eligibility Met:</b> Age 28, Startup in Jaipur<br>Estimated 15-10Lakh</p><button class="s2">View Details</button><button class="s1">Apply Now →</button></div>
-      <div class="tcard"><div class="b">#2<div class="c">94%<br>Match</div></div><h4>Rajasthan Startup Policy 2021</h4><small>Rajasthan State</small><p><b>Key Benefits:</b> Loan up to 10L • Incubation Support • Startup friendly • No collateral<br><b>Eligibility Met:</b> 20yr, Startup/startup<br>Estimated 10 Lakh</p><button class="s2">View Details</button><button class="s1">Apply Now →</button></div>
-      <div class="tcard"><div class="b">#3<div class="c">89%<br>Match</div></div><h4>Stand-Up India Scheme</h4><small>Central</small><p><b>Key Benefits:</b> Loan up to 1Cr • Inclusive support • Women/SC/ST focus • Concessional interest</p><button class="s2">View Details</button><button class="s1">Apply Now →</button></div>
-    </div>
-  </div>
-  <div class="blue">Right Scheme. Right Support. Right Growth.</div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+<main>
+<section id="home" class="page active"><div class="hero"><div><h1>From Government Support<br>to <span>Business Growth.</span></h1><p>NidhiTarang helps entrepreneurs discover the right government schemes, financial assistance and support they are eligible for.</p><button class="primary" data-page="eligibility">Find My Scheme →</button><button class="secondary" data-page="schemes">Explore Schemes</button></div><div class="building"><div class="flag">🇮🇳</div><div class="dome">◆</div><div class="roof"></div><div class="pillars"></div><div class="ground"></div></div></div><div class="trust"><div>✚ <b>Trusted & Verified</b><small>Official government data</small></div><div>♙ <b>Wide Network</b><small>Banks, Partners & Government Bodies</small></div><div>◉ <b>Save Time</b><small>All information in one place</small></div><div>♟ <b>For Everyone</b><small>Startups, MSMEs, Individuals</small></div></div></section>
+<section id="eligibility" class="page"><div class="progress">Step 1 of 3 <i></i> Step 1 of 3</div><div class="formbox"><h2>Check Your Eligibility</h2><p>Tell us about yourself to discover state-level and national schemes tailored for you</p><form id="form"><div class="grid"><label>Full Name<input placeholder="e.g. Rahul Sharma"></label><label>Age<input placeholder="e.g. 28"></label><label>Gender<select><option>Select Gender</option><option>Male</option><option>Female</option></select></label><label>Category<select><option>Select Category</option><option>General</option><option>OBC</option><option>SC/ST</option></select></label><label>State<select><option>Select State</option><option>Rajasthan</option><option>Karnataka</option></select></label><label>District / City<input placeholder="e.g. Jaipur"></label><label>Place Type<select><option>Urban</option><option>Rural</option></select></label><label>Business Type<select><option>Select Business Type</option><option>Startup</option><option>MSME</option></select></label><label>Business Stage<select><option>Idea / Biz / MSME</option></select></label><label>Funding Need<select><option>e.g. Up to 10 L</option></select></label><label>Experience Level<select><option>Select Experience Level</option></select></label></div><button class="primary center">Find My Matching Schemes →</button></form></div></section>
+<section id="schemes" class="page"><div class="profile">◉ Rahul, 28, Jaipur, Rajasthan | Startup | Up to 10 L</div><div class="tabs"><button>All Schemes</button><button>Central Schemes</button><button>State Schemes (Rajasthan)</button><button>For Women</button><button>Collateral Free</button></div><h2>Top Matching Schemes For You</h2><p class="found">12 schemes found - 7 Central, 5 Rajasthan State</p><div class="scheme-layout"><aside><b>☷ Filters</b><hr>Stats / National<br>☑ All<br>□ Central Schemes<br>□ Rajasthan State<hr>Funding Type<br>☑ Collateral Free<br>□ Low Interest<br>□ Subsidy<hr>Business Stage<br>☑ Startup<br>□ MSME<br>□ Idea Stage</aside><div class="cards"><article><em>Central Government Schemes · 7 Schemes</em><h3>PMMY – Pradhan Mantri MUDRA Yojana</h3><p>Up to ₹10 L · Collateral Free · 8–12% Interest</p><ul><li>Minimized Risk</li><li>Loan for working capital & equipment</li><li>Collateral required</li></ul><button class="primary">Apply Now →</button><button>View Details</button></article><article><em>Rajasthan State Schemes · Rajasthan</em><h3>Rajasthan Startup Policy 2021</h3><p>Up to ₹10 L · Subsidy · 2–6% Interest</p><ul><li>Registered in Rajasthan</li><li>Startup support</li><li>Grant up to ₹10 L</li></ul><button class="primary">Apply Now →</button><button>View Details</button></article><article><em>Central Government Schemes · Central</em><h3>Stand-Up India Scheme</h3><p>Up to ₹1 Cr · SC/ST · Collateral Free</p><ul><li>For women entrepreneurs</li><li>Women/SC/ST focus</li><li>Startup friendly</li></ul><button class="primary">Apply Now →</button><button>View Details</button></article><article><em>Rajasthan State Schemes · Rajasthan</em><h3>Rajasthan MSME Interest Subsidy</h3><p>Up to ₹50 L · Subsidy · 5% Interest</p><ul><li>MSME registered in Rajasthan</li><li>Manufacturing & services</li><li>For five years</li></ul><button class="primary">Apply Now →</button><button>View Details</button></article></div></div></section>
+<section id="about" class="page simple"><h2>About NidhiTarang</h2><p>We help entrepreneurs discover government schemes and business support.</p></section><section id="resources" class="page simple"><h2>Resources</h2><p>Business guides, eligibility information and funding resources.</p></section><section id="contact" class="page simple"><h2>Contact Us</h2><p>Connect with the NidhiTarang team.</p></section>
+</main><footer>Right Scheme. Right Support. Right Growth.</footer><button class="chat">☏</button><script src="script.js"></script></body></html>
