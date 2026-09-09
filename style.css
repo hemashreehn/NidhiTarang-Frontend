@@ -5,14 +5,21 @@ header{background:#fff;display:flex;justify-content:space-between;align-items:ce
 .logo h2{font-family:Poppins;color:#0e2a4d;font-size:22px;line-height:1}.logo p{font-size:10px;color:#333}
 nav a{margin-left:28px;font-size:14px;cursor:pointer;color:#222}.active{border-bottom:3px solid #c9a227;padding-bottom:6px;font-weight:600}
 .page{display:none}.page.active{display:block}
-.hero{display:grid;grid-template-columns:1.1fr 0.9fr;padding:30px 40px;gap:10px;background:linear-gradient(#fbfdff,#fff)}
+.hero{display:grid;grid-template-columns:1.1fr 0.9fr;padding:30px 40px;gap:10px;background:#ffffff}
 .hero-left h1{font-family:Poppins;font-size:44px;line-height:1.15;color:#0e2a4d}.gold{color:#c9a227}
 .hero-left p{margin:18px 0;max-width:520px;color:#334;font-size:15px;line-height:1.5}
 .btn-orange{background:#ff6f0f;color:#fff;border:none;padding:12px 22px;border-radius:8px;font-weight:600;cursor:pointer}
 .btn-outline{background:#fff;border:1.5px solid #e6a55c;color:#b56b1e;padding:11px 22px;border-radius:8px;margin-left:10px;cursor:pointer}
 .features{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}.features>div{display:flex;gap:8px;align-items:center}.f-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:18px}.blue{background:#c7d8ea}.beige{background:#f7e7c0}
 .features b{font-size:13px;display:block}.features small{font-size:11px;color:#555}
-.parl-img{width:100%;max-width:620px;opacity:0.95}
+.parl-img{
+  width:100%;
+  max-width:620px;
+  background:transparent;
+  mix-blend-mode:multiply;
+  -webkit-mask-image:linear-gradient(to right, transparent 0%, black 30%);
+  mask-image:linear-gradient(to right, transparent 0%, black 30%);
+}
 .footer-blue{background:#0e2a4d;color:#fff;display:flex;justify-content:space-between;padding:14px 24px;align-items:center;margin-top:30px;position:relative}.disc-left{font-size:10px;line-height:1.3;opacity:0.9}.foot-center{font-weight:600;font-size:16px}.chat{width:52px;height:52px;background:#ff6f0f;border-radius:50%;display:grid;place-items:center;position:absolute;right:24px;top:-28px;font-size:22px}
 .step-row{display:flex;justify-content:space-between;padding:12px 10%;font-size:13px}.progress{height:6px;background:#e5e7eb;margin:0 10%;border-radius:10px}.progress div{height:100%;background:#ff6f0f;border-radius:10px}
 .main-title{text-align:center;font-family:Poppins;font-size:32px;color:#0e2a4d;margin-top:18px}.main-title.left{text-align:left;padding-left:10%}.sub-title{text-align:center;color:#555;font-size:14px;margin:6px 0 16px}.sub-title.left{text-align:left;padding-left:10%}
