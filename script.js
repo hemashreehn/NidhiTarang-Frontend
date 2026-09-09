@@ -36,3 +36,19 @@ document.addEventListener('DOMContentLoaded',()=>{
     showPage('schemesPage');
   });
 });
+function toggleChat(){
+  document.getElementById('chatWidget').classList.toggle('open');
+}
+function sendChat(){
+  let input=document.getElementById('chatInput');
+  let text=input.value.trim();
+  if(!text) return;
+  let body=document.getElementById('chatBody');
+  body.innerHTML+=`<div class="user-msg">${text}</div>`;
+  input.value="";
+  setTimeout(()=>{
+    body.innerHTML+=`<div class="bot-msg">Got it! For "${text}", I suggest checking PMMY MUDRA & Rajasthan Startup Policy. Click "Find My Scheme" to check eligibility.</div>`;
+    body.scrollTop=body.scrollHeight;
+  },600);
+  body.scrollTop=body.scrollHeight;
+}
