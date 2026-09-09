@@ -52,3 +52,21 @@ function sendChat(){
   },600);
   body.scrollTop=body.scrollHeight;
 }
+function toggleChat(){ 
+  const w = document.getElementById('chatWidget');
+  w.classList.toggle('open');
+  console.log("chat clicked", w.classList);
+}
+function sendChat(){
+  let input=document.getElementById('chatInput');
+  let text=input.value.trim();
+  if(!text) return;
+  let body=document.getElementById('chatBody');
+  body.innerHTML+=`<div class="user-msg">${text}</div>`;
+  input.value="";
+  setTimeout(()=>{
+    body.innerHTML+=`<div class="bot-msg">For "${text}", try PMMY MUDRA. Click Find My Scheme!</div>`;
+    body.scrollTop=body.scrollHeight;
+  },500);
+  body.scrollTop=body.scrollHeight;
+}
